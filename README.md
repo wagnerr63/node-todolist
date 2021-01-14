@@ -1,6 +1,6 @@
 # Lista de tarefas com Node + Express + Postgres + JWT
 
-## Requitos:
+## Resiquitos:
  - NodeJs
  - Docker
  - Docker Compose
