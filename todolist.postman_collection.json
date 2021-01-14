@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "724e1eff-a123-4477-a5c9-8da584ca410f",
+		"name": "todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NjY0NiwiZXhwIjoxNjEwNjY2OTQ2fQ.A3yJLFiirVDAJ7lFGRxq5oXmk-skepu60EoQOnFrigg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<methodCall>\n    <methodName>system.listMethods</methodName>\n    <params></params>\n</methodCall>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/users?orderBy=desc",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "desc"
+						}
+					]
+				},
+				"description": "aa"
+			},
+			"response": []
+		},
+		{
+			"name": "List Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NjI0NCwiZXhwIjoxNjEwNjY2NTQ0fQ.TcZef-hjPranMnqJjBplLSLiGj4YQYuKd1QOPd5Rm-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<methodCall>\n    <methodName>system.listMethods</methodName>\n    <params></params>\n</methodCall>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NTg3NiwiZXhwIjoxNjEwNjY2MTc2fQ.veYBQmYPybZXmNJ5cxsra1z38CmuUeoECOXJj1Drizo",
+							"disabled": true
+						}
+					]
+				},
+				"description": "aa"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"João\",\n    \"email\": \"joao@mail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"wagner@mail.com\",\n    \"password\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"wagner@mail.com\",\n    \"password\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/logout",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NjI0NCwiZXhwIjoxNjEwNjY2NTQ0fQ.TcZef-hjPranMnqJjBplLSLiGj4YQYuKd1QOPd5Rm-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Teste\",\n    \"status\": \"1\",\n    \"user_id\": \"61067a35-3fb5-4eb6-90a0-3292356b9dff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NjI0NCwiZXhwIjoxNjEwNjY2NTQ0fQ.TcZef-hjPranMnqJjBplLSLiGj4YQYuKd1QOPd5Rm-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Wagner Ribas\",\n    \"email\": \"wagnerribas@mail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/users/61067a35-3fb5-4eb6-90a0-3292356b9dff",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"61067a35-3fb5-4eb6-90a0-3292356b9dff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NjI0NCwiZXhwIjoxNjEwNjY2NTQ0fQ.TcZef-hjPranMnqJjBplLSLiGj4YQYuKd1QOPd5Rm-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Fazer um README bonito\",\n    \"status\": \"1\",\n    \"user_id\": \"61067a35-3fb5-4eb6-90a0-3292356b9dff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/todos/727e3156-c25d-4e2e-8256-bb2b9646204f",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"727e3156-c25d-4e2e-8256-bb2b9646204f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/users/b08f5b44-c104-4e2e-85a3-bb02198d0fa1",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"b08f5b44-c104-4e2e-85a3-bb02198d0fa1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY3YTM1LTNmYjUtNGViNi05MGEwLTMyOTIzNTZiOWRmZiIsImlhdCI6MTYxMDY2NjI0NCwiZXhwIjoxNjEwNjY2NTQ0fQ.TcZef-hjPranMnqJjBplLSLiGj4YQYuKd1QOPd5Rm-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wagner-todolist.herokuapp.com/todos/4782ff02-7445-419c-9560-e4b3c05575cc",
+					"protocol": "https",
+					"host": [
+						"wagner-todolist",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"4782ff02-7445-419c-9560-e4b3c05575cc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
