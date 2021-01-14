@@ -9,14 +9,14 @@ class AuthController {
         
         const userByEmail = await UsersRepository.findByEmail(email);
         if (userByEmail && userByEmail.password===md5(password)) {
-            const id = userByEmail.id; //esse id viria do banco de dados
+            const id = userByEmail.id;
             const token = jwt.sign({ id }, process.env.SECRET, {
             expiresIn: 300 // expires in 5min
             });
             return response.json({ auth: true, token: token });
         }
 
-        response.status(500).json({message: 'Login inválido!'});
+        response.status(500).json({message: 'Invalid login!'});
     }
 
     async logout (request, response) {
