@@ -14,12 +14,12 @@ services:
     volumes: 
       - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
 
-  app: 
-    build: . 
-    command: npm start 
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "wagnerribas63@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "root"
     ports:
-      - "3000:3000" 
-    volumes:
-      - .:/usr/app 
+      - "16543:80"
     depends_on:
       - db
